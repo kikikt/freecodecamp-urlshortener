@@ -98,7 +98,9 @@ app.post('/api/shorturl', function (req, res) {
       )
 
   } else {
-    res.send("failure")
+    res.json({
+      error: "invalid url"
+    })
   }
 });
 
