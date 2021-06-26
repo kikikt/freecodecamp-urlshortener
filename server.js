@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const bodyParser = require('body-parser');
 const validator = require('validator');
 const mongoose = require('mongoose');
 const {
@@ -46,12 +45,6 @@ var createAndSave = function (done) {
       console.log(err)
     })
 }
-
-
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({
-  extended: false
-}))
 
 // parse application/json
 app.use(express.json())
