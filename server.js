@@ -48,6 +48,7 @@ var createAndSave = function (done) {
 
 // parse application/json
 app.use(express.json())
+app.use(express.urlencoded({extended: false}))
 
 app.get('/', function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
