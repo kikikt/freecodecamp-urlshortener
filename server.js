@@ -78,7 +78,7 @@ app.post('/api/shorturl', function (req, res) {
           }).save().then(data => {
             res.json({
               original_url: req.body.url,
-              shortened_url: largest + 1
+              short_url: largest + 1
             })
           })
           .catch(err => {
